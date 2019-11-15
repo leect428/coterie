@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ImageView
+        android:id="@+id/user_icon"
+        android:layout_width="@dimen/post_user_icon_width"
+        android:layout_height="@dimen/post_user_icon_height"
+        android:src="@drawable/ic_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:textColor="@color/black"
+        tools:text="Captain Falcon"
+        app:layout_constraintStart_toEndOf="@id/user_icon"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/post_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/user_icon"
+        app:layout_constraintTop_toBottomOf="@id/username" 
+        tools:text="March 8th, 69:420 P.M."/>
+    <TextView
+        android:id="@+id/post_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/user_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Show me your moves!!!"
+        android:textColor="@color/black"/>
 
 </android.support.constraint.ConstraintLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/create_post_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create a Post"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/create_group_text_size"
+        android:layout_marginTop="@dimen/create_post_name_text_margin_top"/>
+    <EditText
+        android:id="@+id/post_text"
+        android:inputType="textMultiLine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/create_post_title"
+        app:layout_constraintWidth_percent="0.5"
+        android:layout_marginTop="@dimen/create_post_name_text_margin_top"
+        android:hint="Type your post here..." />
+    <EditText
+        android:id="@+id/post_image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/post_text"
+        app:layout_constraintWidth_percent="0.5"
+        android:layout_marginTop="@dimen/create_post_name_text_margin_top"
+        android:hint="Post Image" />
+    <Button
+        android:id="@+id/create_post_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="CREATE POST"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/post_image"
+        android:layout_marginTop="@dimen/login_button_margin_top"
+        />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Coterie</string>
+    <string name="action_settings">Settings</string>
+    <string name="login_submit">Log In</string>
+    <string name="register_submit">Create Account</string>
+    <string name="already_have_account">Already have an Account? Click here to sign in!</string>
+    <string name="create_account">Click here to make an account!</string>
+</resources>
