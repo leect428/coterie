@@ -27,7 +27,11 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
             Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
             startActivity(i);
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                System.out.println(database.getReference().getKey());
+                DatabaseReference myRef = database.getReference("message");
 
+                myRef.setValue("Hello, World!");
             }
         });
 
@@ -35,10 +39,9 @@ public class LoginActivity extends AppCompatActivity {
         System.out.println(database.getReference().getKey());
         DatabaseReference myRef = database.getReference("message");
 
-        myRef.setVal("Hello world!");
+        myRef.setValue("Hello!");
+
 
     }
-
-
 }
 
