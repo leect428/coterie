@@ -44,6 +44,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "823122864612-7jl605h8d54e09d8k1472s50hpfentfr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.usc",
+            "certificate_hash": "c4f08fd117705978613f8d733e0e92936574e75c"
+          }
+        },
+        {
           "client_id": "823122864612-bg2fcucht16vgh6esosgnfskd4e0du7t.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
