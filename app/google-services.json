@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "823122864612",
+    "firebase_url": "https://final-project-a2b32.firebaseio.com",
+    "project_id": "final-project-a2b32",
+    "storage_bucket": "final-project-a2b32.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:823122864612:android:d072951ee91420adf17ff1",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "823122864612-kh4mrnnbh96jq6kf7jpdg7aqa1fm99lj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvkHoc66SGSE-aomwTNqS2Z4cwgbVcUew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "823122864612-kh4mrnnbh96jq6kf7jpdg7aqa1fm99lj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:823122864612:android:6727de118306e7d5f17ff1",
+        "android_client_info": {
+          "package_name": "com.usc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "823122864612-bg2fcucht16vgh6esosgnfskd4e0du7t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.usc",
+            "certificate_hash": "a8e0825b340e7633b05e4ffb079500b328055698"
+          }
+        },
+        {
+          "client_id": "823122864612-kh4mrnnbh96jq6kf7jpdg7aqa1fm99lj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvkHoc66SGSE-aomwTNqS2Z4cwgbVcUew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "823122864612-kh4mrnnbh96jq6kf7jpdg7aqa1fm99lj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
