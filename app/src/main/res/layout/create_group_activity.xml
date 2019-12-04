@@ -37,6 +37,17 @@
         android:inputType="textMultiLine"
         android:layout_marginTop="@dimen/create_post_name_text_margin_top"
         android:hint="Group Description" />
+    <EditText
+        android:id="@+id/group_image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/group_description"
+        app:layout_constraintWidth_percent="0.5"
+        android:inputType="textMultiLine"
+        android:layout_marginTop="@dimen/create_post_name_text_margin_top"
+        android:hint="Group Image" />
     <Button
         android:id="@+id/create_group_button"
         android:layout_width="0dp"
@@ -47,7 +58,7 @@
         app:layout_constraintWidth_percent="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/group_description"
+        app:layout_constraintTop_toBottomOf="@id/group_image"
         android:layout_marginTop="@dimen/login_button_margin_top"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

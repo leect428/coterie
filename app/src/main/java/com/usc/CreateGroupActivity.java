@@ -32,6 +32,7 @@ public class CreateGroupActivity extends AppCompatActivity {
         final Button create = (Button) findViewById(R.id.create_group_button);
         final EditText name = (EditText) findViewById(R.id.group_name);
         final EditText description = (EditText) findViewById(R.id.group_description);
+        final EditText image = (EditText) findViewById(R.id.group_image);
         final DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("final-project-a2b32");
 
         create.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +48,7 @@ public class CreateGroupActivity extends AppCompatActivity {
                         Group g = new Group();
                         g.setDescription(description.getText().toString());
                         g.setName(name.getText().toString());
+                        g.setImage(image.getText().toString());
                         SharedPreferences sharedPref = getSharedPreferences("mysettings", Context.MODE_PRIVATE);
 
                         User u = new User(sharedPref.getString("USERNAME", ""), "", "");

@@ -18,6 +18,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 import com.usc.GroupActivity;
 import com.usc.GroupsActivity;
 import com.usc.R;
@@ -72,12 +73,17 @@ public class GroupsAdapter extends RecyclerView.Adapter<GroupsAdapter.GroupsView
             button.setText("Join");
         }
 
+        if (g.getImage() != null && !g.getImage().equals("")) {
+            Picasso.get().load(g.getImage()).fit().centerCrop().into(image);
+        }
+
         image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(activity, GroupActivity.class);
                 i.putExtra("GROUP_NAME", g.getName());
                 i.putExtra("GROUP_MEMBERS", g.getMembers().size());
+                i.putExtra("GROUP_IMAGE", g.getImage());
                 activity.startActivity(i);
             }
         });

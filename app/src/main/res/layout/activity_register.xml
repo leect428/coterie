@@ -3,14 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <ImageView
+        android:id="@+id/title"
         android:layout_width="@dimen/icon_width"
         android:layout_height="@dimen/icon_height"
         android:src="@drawable/ic_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/username"
-        android:layout_marginBottom="@dimen/icon_margin" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/title_top_margin"
+        android:paddingBottom="@dimen/icon_margin" />
 
     <TextView
         android:id="@+id/login_error"
@@ -20,7 +23,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:visibility="gone"
         android:textColor="@color/colorError"
-        app:layout_constraintBottom_toTopOf="@id/username"/>
+        app:layout_constraintTop_toBottomOf="@id/title"/>
 
 
     <EditText
@@ -31,8 +34,7 @@
         app:layout_constraintWidth_percent="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/login_error"/>
     <EditText
         android:id="@+id/phone_number"
         android:layout_width="0dp"

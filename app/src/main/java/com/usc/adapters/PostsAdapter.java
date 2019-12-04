@@ -18,6 +18,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 import com.usc.GroupActivity;
 import com.usc.GroupsActivity;
 import com.usc.R;
@@ -61,11 +62,28 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.PostsViewHol
         TextView postBody = holder.view.findViewById(R.id.post_body);
         TextView postTime = holder.view.findViewById(R.id.post_time);
         TextView username = holder.view.findViewById(R.id.username);
+        final ImageView image = holder.view.findViewById(R.id.user_icon);
         final Post p = posts.get(position);
+        final DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("final-project-a2b32");
+
+
+        mDatabase.child("users").child(p.getUser().getUsername()).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                User u = dataSnapshot.getValue(User.class);
+                if (u.getImage() != null && !u.getImage().equals("")) {
+                    Picasso.get().load(u.getImage()).fit().centerCrop().into(image);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+            }
+        });
 
         postBody.setText(p.getText());
         postTime.setText(new Date(p.getTime()).toString());
-        username.setTag(p.getUser().getUsername());
+        username.setText(p.getUser().getUsername());
     }
 
     @Override

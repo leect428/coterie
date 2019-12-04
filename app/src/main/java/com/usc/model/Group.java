@@ -7,9 +7,14 @@ public class Group {
     private ArrayList<User> members;
     private String name;
     private String description;
+    private String image;
 
     public Group() {
         members = new ArrayList<>();
+    }
+
+    public String getImage() {
+        return image;
     }
 
     public String getDescription() {
@@ -38,5 +43,9 @@ public class Group {
 
     public void addMember(User u) {
         members.add(u);
+    }
+
+    public void setImage(String i) {
+        image = i;
     }
 }

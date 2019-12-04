@@ -5,8 +5,8 @@
     <dimen name="icon_height">100dp</dimen>
     <dimen name="icon_margin">30dp</dimen>
     <dimen name="login_button_margin_top">30dp</dimen>
-    <dimen name="group_image_height">100dp</dimen>
-    <dimen name="group_image_width">100dp</dimen>
+    <dimen name="group_image_height">150dp</dimen>
+    <dimen name="group_image_width">150dp</dimen>
     <dimen name="group_name_top_margin">30dp</dimen>
     <dimen name="group_name_text_size">20dp</dimen>
     <dimen name="group_chat_header_height">100dp</dimen>
@@ -27,7 +27,12 @@
     <dimen name="create_group_text_margin_top">20dp</dimen>
     <dimen name="create_post_text_size">100dp</dimen>
     <dimen name="create_post_name_text_margin_top">30dp</dimen>
-
-
+    <dimen name="group_image_padding_right">30dp</dimen>
+    <dimen name="title_top_margin">100dp</dimen>
+    <dimen name="post_text_margin_top">10dp</dimen>
+    <dimen name="profile_image_padding">30dp</dimen>
+    <dimen name="account_padding">10dp</dimen>
+    <dimen name="my_account_text_size">15dp</dimen>
+    <dimen name="post_margin_bottom">10dp</dimen>
 
 </resources>

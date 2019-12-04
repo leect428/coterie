@@ -36,6 +36,7 @@ public class GroupsActivity extends AppCompatActivity {
         final TextView all = (TextView) findViewById(R.id.all_communities);
         final RecyclerView myGroups = (RecyclerView) findViewById(R.id.my_groups);
         final RecyclerView otherGroups = (RecyclerView) findViewById(R.id.other_groups);
+        final TextView myAccount = (TextView) findViewById(R.id.my_account);
 
         final DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("final-project-a2b32");
         SharedPreferences sharedPref = getSharedPreferences("mysettings", Context.MODE_PRIVATE);
@@ -45,6 +46,14 @@ public class GroupsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(GroupsActivity.this, CreateGroupActivity.class);
+                startActivity(i);
+            }
+        });
+
+        myAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(GroupsActivity.this, AccountActivity.class);
                 startActivity(i);
             }
         });

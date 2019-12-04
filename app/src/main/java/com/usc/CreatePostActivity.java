@@ -32,6 +32,7 @@ public class CreatePostActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_post_activity);
         final String groupName = getIntent().getExtras().getString("GROUP_NAME");
+        final String groupImage = getIntent().getExtras().getString("GROUP_IMAGE");
         final int groupMembers = getIntent().getExtras().getInt("GROUP_MEMBERS");
         final Button create = (Button) findViewById(R.id.create_post_button);
         final EditText post = (EditText) findViewById(R.id.post_text);
@@ -56,6 +57,7 @@ public class CreatePostActivity extends AppCompatActivity {
 
                         Intent i = new Intent(CreatePostActivity.this, GroupActivity.class);
                         i.putExtra("GROUP_NAME", groupName);
+                        i.putExtra("GROUP_IMAGE", groupImage);
                         i.putExtra("GROUP_MEMBERS", groupMembers);
                         startActivity(i);
                     }

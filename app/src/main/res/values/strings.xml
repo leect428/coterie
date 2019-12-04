@@ -5,4 +5,7 @@
     <string name="register_submit">Create Account</string>
     <string name="already_have_account">Already have an Account? Click here to sign in!</string>
     <string name="create_account">Click here to make an account!</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="save">Save</string>
+    <string name="my_account">My Account</string>
 </resources>
