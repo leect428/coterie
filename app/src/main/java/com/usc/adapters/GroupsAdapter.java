@@ -30,6 +30,7 @@ import java.util.ArrayList;
 public class GroupsAdapter extends RecyclerView.Adapter<GroupsAdapter.GroupsViewHolder> {
 
     private ArrayList<Group> groups;
+    private ArrayList<Group> allGroups;
     private boolean mine;
     private String username;
     private AppCompatActivity activity;
@@ -42,7 +43,8 @@ public class GroupsAdapter extends RecyclerView.Adapter<GroupsAdapter.GroupsView
         }
     }
 
-    public GroupsAdapter(ArrayList<Group> g, boolean m, String u, AppCompatActivity a) {
+    public GroupsAdapter(ArrayList<Group> d, ArrayList<Group> g, boolean m, String u, AppCompatActivity a) {
+        allGroups = d;
         groups = g;
         mine = m;
         username = u;
@@ -93,17 +95,23 @@ public class GroupsAdapter extends RecyclerView.Adapter<GroupsAdapter.GroupsView
             public void onClick(View v) {
                 DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("final-project-a2b32");
 
+                Group g2 = null;
+                for(Group t: allGroups){
+                    if(t.getName().equals(g.getName())){
+                        g2 = t;
+                    }
+                }
                 if (mine) {
-                    for (int i = g.getMembers().size()-1; i >= 0; i--) {
-                        if (g.getMembers().get(i).getUsername().equals(username)) {
-                            g.getMembers().remove(i);
+                    for (int i = g2.getMembers().size()-1; i >= 0; i--) {
+                        if (g2.getMembers().get(i).getUsername().equals(username)) {
+                            g2.getMembers().remove(i);
                         }
                     }
                 } else {
-                    g.getMembers().add(new User(username, "", ""));
+                    g2.getMembers().add(new User(username, "", ""));
                 }
 
-                mDatabase.child("groups").setValue(groups);
+                mDatabase.child("groups").setValue(allGroups);
                 Intent i = new Intent(activity, GroupsActivity.class);
                 activity.startActivity(i);
                 activity.finish();

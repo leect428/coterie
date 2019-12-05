@@ -84,11 +84,11 @@ public class GroupsActivity extends AppCompatActivity {
                     }
                 }
 
-                GroupsAdapter myAdapter = new GroupsAdapter(mine, true, username, GroupsActivity.this);
+                GroupsAdapter myAdapter = new GroupsAdapter(groups, mine, true, username, GroupsActivity.this);
                 myGroups.setAdapter(myAdapter);
                 myGroups.setLayoutManager(new LinearLayoutManager(GroupsActivity.this));
 
-                GroupsAdapter otherAdapter = new GroupsAdapter(other, false, username, GroupsActivity.this);
+                GroupsAdapter otherAdapter = new GroupsAdapter(groups, other, false, username, GroupsActivity.this);
                 otherGroups.setAdapter(otherAdapter);
                 otherGroups.setLayoutManager(new LinearLayoutManager(GroupsActivity.this));
             }
