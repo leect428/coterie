@@ -28,6 +28,8 @@ import com.usc.model.Post;
 import com.usc.model.User;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class GroupActivity extends AppCompatActivity {
 
@@ -63,7 +65,21 @@ public class GroupActivity extends AppCompatActivity {
                     };
                     posts = dataSnapshot.getValue(type);
                 }
+                Collections.sort(posts,
+                        new Comparator<Post>() {
+                            @Override
+                            public int compare(Post o1, Post o2) {
+                                if(o1.getTime() < o2.getTime()){
+                                    return 1;
+                                }
+                                else if(o1.getTime() > o2.getTime()){
+                                    return -1;
+                                }
+                                return 0;
+                            }
+                        }
 
+                    );
                 members.setText(groupMembers + "MEMBERS");
                 numPosts.setText(posts.size() + " POSTS");
 
