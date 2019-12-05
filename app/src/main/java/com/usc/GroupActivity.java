@@ -47,7 +47,9 @@ public class GroupActivity extends AppCompatActivity {
         final ImageView image = (ImageView) findViewById(R.id.group_image);
 
 
-        Picasso.get().load(groupImage).fit().centerCrop().into(image);
+        if (groupImage != null && !groupImage.equals("")) {
+            Picasso.get().load(groupImage).fit().centerCrop().into(image);
+        }
 
         final DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("final-project-a2b32");
         SharedPreferences sharedPref = getSharedPreferences("mysettings", Context.MODE_PRIVATE);
